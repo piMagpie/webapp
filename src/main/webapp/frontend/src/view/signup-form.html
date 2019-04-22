@@ -1,0 +1,70 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-layout.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-item.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+
+<dom-module id="signup-form">
+    <template>
+        <style include="shared-styles">
+            :host {
+                display: block;
+                color: white;
+            }
+
+            #form-container {
+                background: #9152f8;
+                background: -webkit-linear-gradient(top, #7579ff, #b224ef);
+                background: -o-linear-gradient(top, #7579ff, #b224ef);
+                background: -moz-linear-gradient(top, #7579ff, #b224ef);
+                background: linear-gradient(top, #7579ff, #b224ef);
+
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <vaadin-form-layout id="form-container">
+            <vaadin-form-item>
+                <label slot="label">Username</label>
+                <vaadin-text-field class="full-width" value="Jane" required></vaadin-text-field>
+            </vaadin-form-item>
+            <vaadin-form-item>
+                <label slot="label">First Name</label>
+                <vaadin-text-field class="full-width" value="Jane"></vaadin-text-field>
+            </vaadin-form-item>
+            <vaadin-form-item>
+                <label slot="label">Last Name</label>
+                <vaadin-text-field class="full-width" value="Doe"></vaadin-text-field>
+            </vaadin-form-item>
+            <vaadin-form-item>
+                <label slot="label">Email</label>
+                <vaadin-text-field class="full-width" value="jane.doe@example.com"></vaadin-text-field>
+            </vaadin-form-item>
+            <vaadin-form-item>
+                <label slot="label">Address</label>
+                <vaadin-text-field class="full-width" value="Some Street 123"></vaadin-text-field>
+            </vaadin-form-item>
+            <vaadin-form-item>
+                <vaadin-button theme="primary">
+                    Submit
+                </vaadin-button>
+            </vaadin-form-item>
+        </vaadin-form-layout>
+    </template>
+
+    <script>
+        class SignupForm extends Polymer.Element {
+            static get is() {
+                return 'signup-form';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+
+        customElements.define(SignupForm.is, SignupForm);
+    </script>
+</dom-module>

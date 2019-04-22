@@ -1,0 +1,43 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/vaadin-ordered-layout/src/vaadin-vertical-layout.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-text-field.html">
+<link rel="import" href="../../bower_components/vaadin-text-field/src/vaadin-password-field.html">
+<link rel="import" href="../../bower_components/vaadin-form-layout/src/vaadin-form-layout.html">
+<link rel="import" href="../../bower_components/vaadin-button/src/vaadin-button.html">
+
+<dom-module id="login-view">
+    <template>
+<style include="shared-styles">
+            :host {
+                display: block;
+            }
+        </style>
+<!-- html -->
+<vaadin-vertical-layout style="width: 100%; height: 100%;">
+ <vaadin-form-layout>
+  <vaadin-text-field label="Username" placeholder="Placeholder"></vaadin-text-field>
+  <vaadin-password-field label="Password" placeholder="Enter password" value=""></vaadin-password-field>
+  <vaadin-button>
+    Login 
+  </vaadin-button>
+ </vaadin-form-layout>
+</vaadin-vertical-layout>
+<!-- end html -->
+</template>
+
+    <script>
+        class LoginView extends Polymer.Element {
+            static get is() {
+                return 'login-view';
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+
+        customElements.define(LoginView.is, LoginView);
+    </script>
+</dom-module>

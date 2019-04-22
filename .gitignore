@@ -1,0 +1,32 @@
+
+# /
+.classpath
+*.project
+*.settings
+/.cvsignore
+/.tomcatplugin
+/work
+/.gwt-cache
+/.externalToolBuilders
+/extras
+**/bin
+*~
+
+*pom.xml.versionsBackup
+
+**/target
+**/error-screenshots
+# Mac
+*.DS_Store
+
+# Python
+scripts/*.pyc
+
+# Intellij Idea files
+.idea
+*.iml
+
+# Selenium driver folders
+selenium_standalone_zips
+driver_zips
+driver
